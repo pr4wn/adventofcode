@@ -17,7 +17,6 @@ my @totals;
 foreach my $s (@lines) {
     if ( $s eq "" ) {
         push @totals, $elves[$elfno];
-        $s = "";
         $elfno++;
     }
     else {
