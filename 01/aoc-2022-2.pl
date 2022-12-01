@@ -10,8 +10,6 @@ close($fh);
 my @elves = 0;
 my $s;
 my $elfno    = 0;
-my $maxelfno = 0;
-my $maxelf   = 0;
 my @totals;
 
 foreach my $s (@lines) {
