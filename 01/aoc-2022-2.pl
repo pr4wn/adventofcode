@@ -16,10 +16,6 @@ my @totals;
 
 foreach my $s (@lines) {
   if ($s eq "") {
-	if ($maxelfno <= $elves[$elfno]) {
-		$maxelf = $elfno;
-		$maxelfno = $elves[$elfno];
-	}
 	push @totals, $elves[$elfno];
 	$s = "";
     	$elfno++;
