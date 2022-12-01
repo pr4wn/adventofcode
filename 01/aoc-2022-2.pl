@@ -24,7 +24,7 @@ foreach my $s (@lines) {
     }
 }
 
-@totals = sort { $a <=> $b } @totals;
-my $j = $totals[$#totals] + $totals[$#totals-1] + $totals[$#totals-2];
+@totals = sort { $b <=> $a } @totals;
+my $j = $totals[0] + $totals[1] + $totals[2];
 
 print "Top three elves have consumed " . $j . " calories\n";
