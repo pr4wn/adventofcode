@@ -7,7 +7,7 @@ my $fn = "./input.txt";
 open my $fh, '<', $fn or die $!;
 chomp( my @lines = <$fh> );
 close($fh);
-my @elves = 0;
+my @elves;
 my $s;
 my $elfno    = 0;
 my @totals;
