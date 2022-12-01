@@ -27,4 +27,4 @@ foreach my $s (@lines) {
 @totals = sort { $b <=> $a } @totals;
 my $j = $totals[0] + $totals[1] + $totals[2];
 
-print "Top three elves have consumed " . $j . " calories\n";
+print "Top three elves have carried " . $j . " calories\n";

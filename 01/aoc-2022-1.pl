@@ -27,4 +27,4 @@ foreach my $s (@lines) {
     }
 }
 
-print "Elf number $maxelf has consumed " . $maxelfno . " calories\n";
+print "Elf number $maxelf has carried " . $maxelfno . " calories\n";
