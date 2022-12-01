@@ -26,8 +26,6 @@ foreach my $s (@lines) {
 }
 
 @totals = sort { $a <=> $b } @totals;
-my @stotals = reverse(@totals);
-
-my $j = $stotals[0] + $stotals[1] + $stotals[2];
+my $j = $totals[$#totals] + $totals[$#totals-1] + $totals[$#totals-2];
 
 print "Top three elves have consumed " . $j . " calories\n";
