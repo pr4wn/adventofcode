@@ -1,7 +1,6 @@
 #!/usr/bin/perl
 use strict;
 use warnings;
-use feature qw(switch);
 
 my $fn = "./input-02.txt";
 
@@ -12,19 +11,21 @@ my $score;
 my %column_0 = qw( A ROCK B PAPER C SCISSORS);
 my %column_1 = qw( X ROCK Y PAPER Z SCISSORS);
 foreach my $s (@lines) {
-    my @a = split(' ', $s);
-    if ($column_0{$a[0]} eq "ROCK") {
-      if ($column_1{$a[1]} =~ m/ROCK/) {$score += 3};
-      if ($column_1{$a[1]} =~ m/PAPER/) {$score += 4};
-      if ($column_1{$a[1]} =~ m/SCISSORS/) {$score += 8}; 
-    } elsif ($column_0{$a[0]} eq "PAPER") {
-      if ($column_1{$a[1]} =~ m/ROCK/) {$score += 1};
-      if ($column_1{$a[1]} =~ m/PAPER/) {$score += 5};
-      if ($column_1{$a[1]} =~ m/SCISSORS/) {$score += 9};    
-    } elsif($column_0{$a[0]} eq "SCISSORS") {
-      if ($column_1{$a[1]} =~ m/ROCK/) {$score += 2};
-      if ($column_1{$a[1]} =~ m/PAPER/) {$score += 6};
-      if ($column_1{$a[1]} =~ m/SCISSORS/) {$score += 7};      
+    my @a = split( ' ', $s );
+    if ( $column_0{ $a[0] } eq "ROCK" ) {
+        if ( $column_1{ $a[1] } =~ m/ROCK/ )     { $score += 3 }
+        if ( $column_1{ $a[1] } =~ m/PAPER/ )    { $score += 4 }
+        if ( $column_1{ $a[1] } =~ m/SCISSORS/ ) { $score += 8 }
+    }
+    elsif ( $column_0{ $a[0] } eq "PAPER" ) {
+        if ( $column_1{ $a[1] } =~ m/ROCK/ )     { $score += 1 }
+        if ( $column_1{ $a[1] } =~ m/PAPER/ )    { $score += 5 }
+        if ( $column_1{ $a[1] } =~ m/SCISSORS/ ) { $score += 9 }
+    }
+    elsif ( $column_0{ $a[0] } eq "SCISSORS" ) {
+        if ( $column_1{ $a[1] } =~ m/ROCK/ )     { $score += 2 }
+        if ( $column_1{ $a[1] } =~ m/PAPER/ )    { $score += 6 }
+        if ( $column_1{ $a[1] } =~ m/SCISSORS/ ) { $score += 7 }
     }
 }
 print "total score: " . $score . "\n";
