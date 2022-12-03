@@ -17,11 +17,13 @@ while ( $i < $#lines ) {
     for my $ch (@lc) {
         my $s = chr( $ch + ord('a') - 1 );
         if ( ( $s1 =~ /$s/ ) and ( $s2 =~ /$s/ ) and ( $s3 =~ /$s/ ) ) {
-        }
+          $score += $ch;
+	}
         my $t = chr( $ch + ord('A') - 1 );
-        print "$t\n";
+       
         if ( ( $s1 =~ /$t/ ) and ( $s2 =~ /$t/ ) and ( $s3 =~ /$t/ ) ) {
-        }
+           $score += $ch + 26;
+       	}
 
     }
     $i += 3;
