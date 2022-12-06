@@ -15,10 +15,7 @@ foreach my $s (@lines) {
         $seencount = 0;
         for my $j ( 0 .. length($s1) ) {
             my $ch = substr( $s1, $j, 1 );
-            if ( $seen{$ch} ) {
-                $seen{$ch} += 1;
-            }
-            else {
+            if (! $seen{$ch} ) {
                 $seen{$ch} += 1;
                 $seencount += 1;
             }
